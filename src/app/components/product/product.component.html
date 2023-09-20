@@ -1,4 +1,6 @@
 <app-img *ngIf="product.images.length > 0" [img]="product.images[0]"></app-img>
-<h2>{{ product.price | currency:'COP' }}</h2>
+<h2>{{ product.price | currency:'COP ' }}</h2>
 <p>{{ product.title }}</p>
+<p *ngIf="product.taxes">{{ product.taxes }}</p>
+<button (click)="onShowDetail()">Ver detalle</button>
 <button (click)="onAddToCart()">Add cart</button>
